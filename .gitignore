@@ -1,0 +1,13 @@
+# Ignore venv
+venv/
+.env
+
+# Django stuff
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+
+# IDE files
+.idea/
+.vscode/
