@@ -12,7 +12,7 @@ def updateTrack(request,id):
     if request.method =='POST':
         track_to_update.name = request.POST['name']
         track_to_update.save()
-        return redirect("alltrackes")
+        return redirect("alltracks")
     return render(request,'tracks/update.html',{'track':track_to_update})
 def addTrack(request):
     if request.method == 'POST':
@@ -20,6 +20,10 @@ def addTrack(request):
         new_track = Track.objects.create(name=track_name) #create a new object and also save the name to the database bt3ml record gdid brdo
         return redirect('alltracks')
     return render(request, 'tracks/addtrack.html')
+def deleteTrack(request,id):
+    track_to_delete = Track.objects.get(id= id)
+    track_to_delete.delete()
+    return render(request, 'tracks/list.html')
 
 
 

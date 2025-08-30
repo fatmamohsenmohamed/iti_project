@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Track Info</title>
+</head>
+<body>
+    <h1>Track Details</h1>
+
+    <p><strong>ID:</strong> {{ track.id }}</p>
+    <p><strong>Name:</strong> {{ track.name }}</p>
+
+
+    <a href="{% url 'get_track' %}">Back to All Tracks</a>
+</body>
+</html>

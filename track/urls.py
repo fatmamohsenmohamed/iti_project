@@ -5,4 +5,5 @@ url_pattern=[
     path("get_track/",getTrackById,name="get_track"),
     path("updatetrack/",updateTrack,name="updatetrack"),
     path("addtrack/",addTrack,name="addtrack"),
+    path("deletetrack/", deleteTrack, name="deletetrack"),
 ]
